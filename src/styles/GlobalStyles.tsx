@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    cursor: pointer;
   }
   li {
     list-style: none;
