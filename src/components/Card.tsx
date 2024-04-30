@@ -4,10 +4,11 @@ import { CustomButton } from "./Button.styled";
 import { Paragraph } from "./Paragraph.styles";
 import { Title } from "./Title.styled";
 import styled from "styled-components";
+import { FlexWrapper } from "./FlexWrapper";
 
 type CardPropsType = {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
 };
 
 export function Card({ title, description }: CardPropsType) {
@@ -22,18 +23,15 @@ export function Card({ title, description }: CardPropsType) {
       </figure>
       <div className="wrapper">
         <figcaption>
-          <Title>{title || "Headline"}</Title>
-          <Paragraph type="for-card">
-            {description ||
-              "Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen."}
-          </Paragraph>
+          <Title>{title}</Title>
+          <Paragraph type="for-card">{description}</Paragraph>
         </figcaption>
-        <div className="button-wrapper">
+        <FlexWrapper gap={"12px"} mt={"10px"} align={"center"}>
           <CustomButton as="a" btnType="primary">
             See more
           </CustomButton>
           <CustomButton btnType="outlined">Save</CustomButton>
-        </div>
+        </FlexWrapper>
       </div>
     </CardWrapper>
   );
@@ -45,6 +43,12 @@ export const CardWrapper = styled.article`
   max-width: 300px;
   padding: 10px;
   width: 100%;
+
+  picture {
+    display: block;
+    width: 100%;
+    height: 170px;
+  }
 
   figure {
     max-width: 280px;
@@ -60,6 +64,8 @@ export const CardWrapper = styled.article`
   source,
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   figcaption {
@@ -71,13 +77,5 @@ export const CardWrapper = styled.article`
 
   .wrapper {
     padding: 10px;
-  }
-
-  .button-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 12px;
-    margin-top: 10px;
   }
 `;

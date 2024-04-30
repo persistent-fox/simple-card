@@ -14,7 +14,9 @@ export const Paragraph = styled.p<ParagraphPropsType>`
   ${(props) =>
     props.type === "for-card" &&
     css<ParagraphPropsType>`
-      max-height: 40px;
       overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     `}
 `;
