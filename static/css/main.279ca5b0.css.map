@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.279ca5b0.css","mappings":"AAAA,KAII,kBAAmB,CAFnB,YAAa,CAGb,cAAe,CACf,QAAS,CAHT,4BAA6B,CAF7B,YAMJ","sources":["App.css"],"sourcesContent":[".App {\r\n    padding: 20px;\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    align-items: center;\r\n    flex-wrap: wrap;\r\n    gap: 20px;\r\n}"],"names":[],"sourceRoot":""}
